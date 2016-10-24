@@ -18,7 +18,7 @@ Les tests unitaires présents dans **co.simplon.prairie.FizzBuzzTest** doivent p
 
 ## Outils ligne de commande (se placer à la racine du projet) :
 - Pour compiler les sources :
-  - Windows :
+  - Windows : javac src/main/java/co/simplon/prairie/\*.java
   - Unix : javac src/main/java/co/simplon/prairie/\*.java
 - Pour compiler les tests : 
   - Windows : javac -cp "src/main/java;libs/\*" src/test/java/co/simplon/prairie/\*.java
