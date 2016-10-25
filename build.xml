@@ -8,7 +8,7 @@
   <property name="test" location="src/test/java"/>
   <property name="lib" location="libs"/>
   <property name="build" location="build"/>
-  <property name="dist" location="dist"/>
+  <property name="reports" location="reports"/>
 
   <path id="classpath.test">
       <pathelement location = "${lib}/junit-4.12.jar" />
@@ -39,12 +39,24 @@
       <junit>
          <classpath refid = "classpath.test" />
          <formatter type = "brief" usefile = "false" />
-         <test name="co.simplon.prairie.FizzBuzzTest" />
+         <test name="co.simplon.prairie.FizzBuzzTest" todir="${reports}" />
       </junit>
+  </target>
+  
+  <target name="reports" description="Production des rapports" depends="test">
+    <junitreport todir="${reports}">
+      <fileset dir="${reports}">
+        <include name="TEST-*.xml"/>
+      </fileset>
+      <report format="frames" todir="${reports}/html"/>
+    </junitreport>
   </target>
 
   <target name="clean"
         description="clean up">
     <delete dir="${build}"/>
+    <delete dir="${reports}"/>
+    <mkdir dir="${reports}"/>
   </target>
+  
 </project>
