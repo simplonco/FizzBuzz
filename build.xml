@@ -11,7 +11,8 @@
   <property name="dist" location="dist"/>
 
   <path id="classpath.test">
-      <pathelement location = "libs/*.jar" />
+      <pathelement location = "${lib}/junit-4.12.jar" />
+      <pathelement location = "${lib}/hamcrest-core-1.3.jar" />
       <pathelement location = "${test}" />
       <pathelement location = "${src}" />
   </path>
@@ -23,7 +24,7 @@
   <target name="compile" depends="init"
         description="compile the source">
     <javac srcdir="${src}" destdir="${build}">
-      <classpath refid = "classpath.test"/>
+      <classpath refid="classpath.test"/>
     </javac>
   </target>
   
