@@ -6,7 +6,7 @@
 - Découverte des structures de contrôle
 - Algorithmie
 - Tests unitaires
-- Démo de l'intégration continue avec Travis
+- [Démo de l'intégration continue avec Travis](https://travis-ci.org/simplon-promo-pe-1/FizzBuzz)
 
 ## Enoncé :
 Ecrire un programme permettant l'affichage d'une série d'entier sur la sortie standard (un entier par ligne) en appliquant les règles suivantes :
